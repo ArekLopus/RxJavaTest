@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.acd</groupId>
+    <artifactId>RxJavaTest</artifactId>
+    <version>1.0.0</version>
+    <packaging>war</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <fx.home>c:/JavaUtils/javafx_lib/</fx.home>
+    </properties>
+	
+    <build>
+        <finalName>${project.artifactId}</finalName>
+    </build>
+	
+    <dependencies>
+        
+		<dependency>
+    		<groupId>io.reactivex.rxjava2</groupId>
+    		<artifactId>rxjava</artifactId>
+    		<version>2.2.8</version>
+		</dependency>
+		
+		<dependency>
+    		<groupId>io.reactivex</groupId>
+    		<artifactId>rxjavafx</artifactId>
+    		<version>2.0.2</version>
+		</dependency>
+		
+		
+		<!-- From Java OpenJDK1.8.0_192, not included in the public maven repository -->
+        <dependency>
+            <groupId>com.oracle</groupId>
+            <artifactId>javafx</artifactId>
+            <version>2.0</version>
+            <systemPath>${fx.home}/jfxrt.jar</systemPath>
+            <scope>system</scope>
+        </dependency>
+		
+		
+		<!-- Needed for collect() fe. -->
+		<dependency>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-json-processing</artifactId>
+            <version>2.28</version>
+        </dependency>
+	
+        <!-- <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-client</artifactId>
+            <version>2.28</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.glassfish.jersey.inject</groupId>
+            <artifactId>jersey-hk2</artifactId>
+            <version>2.28</version>
+        </dependency>
+		
+        <dependency>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-json-binding</artifactId>
+            <version>2.28</version>
+        </dependency> -->
+		
+		
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+</project>
